@@ -20,8 +20,14 @@ flowchart LR
 ```
 Modern blogging platforms like *Gatsby* or *Jekyll* offer visually appealing and simple designs for Markdown blogs. However, these platforms come with certain limitations. Firstly, they require a significant number of dependencies, which can slow down the blog and complicate maintenance. Secondly, the tools and frameworks in this domain are constantly evolving, making it challenging to keep up with the latest changes.
 
-![John's blog in 2002](john2002.png)
-![John's blog in 2023](john2023.png)
+<p algin="center">
+<img src="john2002.png" width="400px" height=auto text-align=center >
+</p>
+
+<p algin="center">
+<img src="john2023.png" width="400px" height=auto text-align=center >
+</p>
+
 
 To illustrate this point, let's examine the evolution of John Gruber's blog, who is renowned for creating the Markdown format. Comparing the design of his blog from 2002 to its 2023 version, we observe minimal changes. This consistency underscores a critical insight: the value of a blog lies more in its content than in its aesthetic presentation.
 
