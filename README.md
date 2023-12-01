@@ -20,13 +20,9 @@ flowchart LR
 ```
 Modern blogging platforms like *Gatsby* or *Jekyll* offer visually appealing and simple designs for Markdown blogs. However, these platforms come with certain limitations. Firstly, they require a significant number of dependencies, which can slow down the blog and complicate maintenance. Secondly, the tools and frameworks in this domain are constantly evolving, making it challenging to keep up with the latest changes.
 
-<p algin="center">
 <img src="john2002.png" width="400px" height=auto text-align=center >
-</p>
-
-<p algin="center">
 <img src="john2023.png" width="400px" height=auto text-align=center >
-</p>
+
 
 
 To illustrate this point, let's examine the evolution of John Gruber's blog, who is renowned for creating the Markdown format. Comparing the design of his blog from 2002 to its 2023 version, we observe minimal changes. This consistency underscores a critical insight: the value of a blog lies more in its content than in its aesthetic presentation.
@@ -69,3 +65,30 @@ flowchart LR
 ```
 
 Someday I will write my own minimal Template engine for my blog. 
+
+```
+My Folder Hierarchy referring to Dewey Decimal classes
+.
+└── Notes/
+    ├── 000 Computer science, knowledge, and systems/
+    │   ├── 001 Knowledge
+    │   ├── 002 The book (writing, libraries, and book-related topics)
+    │   ├── 003 Systems
+    │   ├── 004 Data processing and computer science
+    │   ├── 005 Computer programming, programs, and data
+    │   ├── 006 Special computer methods 
+    │   └── 007 UNI Leipzig CS bachelor
+    ├── 030 Encyclopedias and books of facts/
+    │   ├── 031 Korean
+    │   ├── 032 German
+    │   └── 033 English
+    ├── 330 Economics/
+    │   └── 332 Financial economics
+    ├── 500 Science/
+    │   ├── 510 Mathematics
+    │   ├── 512 Algebra
+    │   ├── 515 Analysis
+    │   └── 519 Probabilities and applied mathematics
+    └── 530 Physics/
+        └── 537 Electricity and electronics
+```
