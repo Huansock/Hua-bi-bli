@@ -16,4 +16,17 @@ mkdir -p Notes/500\ Science/{510\ Mathematics,512\ Algebra,515\ Analysis,519\ Pr
 # Create subdirectories for Physics
 mkdir -p Notes/530\ Physics/537\ Electricity\ and\ electronics
 
-echo "Directory structure has been created."
+# Create subdirectories for Uni Leipzig informatik 
+
+mkdir -p 007.1\ 1.\ Semester/{007.11\ ADS,007.12\ Analysis,007.13\ DS,007.14\ MuP,007.15\ TI1}
+mkdir -p 007.2\ 2.\ Semester/{007.21\ ADS2,007.22\ Linear,007.23\ Logik,007.24\ MuP2,007.25\ OOP}
+mkdir -p 007.3\ 3.\ Semester/{007.31\ Automata,007.32\ DBS,007.33\ Kommunikation,007.34\ Software\ Technik,007.35\ Wahrscheinlichkeit}
+
+if command -v tree >/dev/null 2>&1; then
+    tree . > blog_tree.txt
+else
+    echo "tree command is not available. Please install it to view the directory structure."
+fi
+
+echo "Directory structure has been created.\n"
+echo "you can find your direcrory structure in ./blog_tree.txt"

@@ -1,0 +1,40 @@
+* Hugo
+
+  Hugo 는 html이나 md 같은 정적 파일을 웹사이트로 만들기 위한 go 언어 기반의 프레임워크 입니다.
+
+** Hugo를 왜 선택했나요?
+  
+  {https://www.getzola.org/}[Zola] 랑 {https://gohugo.io/}[Hugo] 중에서 고민을 많이 했습니다. Hugo를 고른 이유를 세가지로 줄일 수 있습니다. 
+
+   ~ Zola 팀은 Zola를 새롭게 Tera 2로 만들려고 합니다. 저는 이를 위한 마이그레이팅을 하기 싫습니다.
+   ~ Hugo는 후원자가 있습니다. 이는 꾸준하고 안정적인 개발에 도움이 됩니다. 이를 기반으로 Hugo 팀은 Zola 팀보다 주기적인 업데이트를 지원합니다.
+   ~ Hugo의 커뮤니티가 Zola의 것보다 큽니다. 그래서 그런지 Hugo는 Zola보다 더 많은 템플릿을 보유하고 있습니다. 
+
+** Hugo의 단점이 뭔가요?
+
+  ~ 공식문서가 많이 더럽습니다. 
+  ~ do end 블록의 존재와 이상한 문법들 - 다른 프레임워크의 영향을 받은 것 같음.
+  ~ 한국에서 별로 안 유명함. 
+
+   @code html
+    {{ define "main" }}
+    <main>
+    <article>
+      <header>
+        <h1>{{ .Title }}</h1>
+      </header>
+      <!-- "{{ .Content }}" pulls from the markdown content of the corresponding _index.md -->
+      {{ .Content }}
+    </article>
+    <ul>
+      <!-- Ranges through content/posts/*.md -->
+      {{ range .Pages }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} | {{ .LinkTitle }}</a>
+        </li>
+      {{ end }}
+    </ul>
+    </main>
+    {{ end }}
+   @end
+

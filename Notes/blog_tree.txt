@@ -1,0 +1,44 @@
+.
+├── 000 Computer science, knowledge, and systems
+│   ├── 001 Knowledge
+│   │   └── first.md
+│   ├── 002 The book
+│   ├── 003 Systems
+│   ├── 004 Data processing and computer science
+│   ├── 005 Computer programming, programs, and data
+│   ├── 006 Special computer methods
+│   └── 007 UNI Leipzig CS bachelor
+│       ├── 007.1 1. Semester
+│       │   ├── 007.11 ADS
+│       │   ├── 007.12 Analysis
+│       │   ├── 007.13 DS
+│       │   ├── 007.14 MuP
+│       │   └── 007.15 TI1
+│       ├── 007.2 2. Semester
+│       │   ├── 007.21 ADS2
+│       │   ├── 007.22 Linear
+│       │   ├── 007.23 Logik
+│       │   ├── 007.24 MuP2
+│       │   └── 007.25 OOP
+│       └── 007.3 3. Semester
+│           ├── 007.31 Automata
+│           ├── 007.32 DBS
+│           ├── 007.33 Kommunikation
+│           ├── 007.34 Software Technik
+│           └── 007.35 Wahrscheinlichkeit
+├── 030 Encyclopedias and books of facts
+│   ├── 031 Korean
+│   ├── 032 German
+│   └── 033 English
+├── 330 Economics
+│   └── 332 Financial economics
+├── 500 Science
+│   ├── 510 Mathematics
+│   ├── 512 Algebra
+│   ├── 515 Analysis
+│   └── 519 Probabilities and applied mathematics
+├── 530 Physics
+│   └── 537 Electricity and electronics
+└── blog_tree.txt
+
+40 directories, 2 files
