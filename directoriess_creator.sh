@@ -1,3 +1,5 @@
+#!/bin/sh 
+
 # Create the top-level Notes directory
 mkdir -p Notes
 
