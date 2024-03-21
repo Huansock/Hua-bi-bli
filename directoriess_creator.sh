@@ -18,9 +18,9 @@ mkdir -p Notes/530_Physics/537_Electricity_and_electronics
 
 # Create subdirectories for Uni Leipzig informatik 
 
-mkdir -p Notes/{007.1_1._Semester/{007.11_ADS,007.12_Analysis,007.13_DS,007.14_MuP,007.15_TI1}}	
-mkdir -p Notes/{007.2_2._Semester/{007.21_ADS2,007.22_Linear,007.23_Logik,007.24_MuP2,007.25_OOP}}
-mkdir -p Notes/{007.3_3._Semester/{007.31_Automata,007.32_DBS,007.33_Kommunikation,007.34_Software_Technik,007.35_Wahrscheinlichkeit}}
+mkdir -p Notes/000_Computer_science\,_knowledge\,_and_systems/007_UNI_Leipzig_CS_bachelor/007.1_Semester/{007.11_ADS,007.12_Analysis,007.13_DS,007.14_MuP,007.15_TI1}}	
+mkdir -p Notes/000_Computer_science\,_knowledge\,_and_systems/007_UNI_Leipzig_CS_bachelor/007.2_Semester/{007.21_ADS2,007.22_Linear,007.23_Logik,007.24_MuP2,007.25_OOP}
+mkdir -p Notes/000_Computer_science\,_knowledge\,_and_systems/007_UNI_Leipzig_CS_bachelor/007.3._Semester/{007.31_Automata,007.32_DBS,007.33_Kommunikation,007.34_Software_Technik,007.35_Wahrscheinlichkeit}
 
 if command -v tree >/dev/null 2>&1; then
     tree . > blog_tree.txt
