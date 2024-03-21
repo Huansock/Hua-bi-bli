@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        code {
+          font-family: Consolas,"courier new";
+          background-color: #f1f1f1;
+          font-size: 105%;
+          padding: 20px;
+          display: inline-flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-items: flex-start;
+          counter-reset: lines;
+          border-radius: 10px;
+        }
+        pre{
+            width: 80ch;
+            font-family: monospace;
+            font-size: 30px;
+            line-height: 30px;
+            background: 
+                linear-gradient(to right, white 0ch, #78dce8 0ch, #78dce8 3ch, white 3ch, white 18ch, #FFD658 18ch, #FFD658 31ch, white 31ch, white 80ch), 
+                linear-gradient(to right, white 0ch, #a6e22e 0ch, #a6e22e 3ch, white 3ch, white 12ch, #f92672 12ch, #f92672 15ch,  #A7C 15ch,  #A7C 17ch, white 17ch, white 80ch), 
+                linear-gradient(to right, white 0ch, white 0ch, white 4ch, #fd971f 4ch, #fd971f 11ch, white 11ch, white 12ch, #a6e22e 12ch, #a6e22e 15ch, white 15ch, white 16ch, #FFD658 16ch, #FFD658 34ch, #f92672 34ch, #f92672 37ch, white 37ch, white 80ch), 
+                linear-gradient(to right, white 0ch, white 0ch, white 80ch), 
+                linear-gradient(to right, white 0ch, white 0ch, white 80ch); 
+            background-repeat: no-repeat; 
+            background-size: 80ch 30px, 80ch 60px, 80ch 90px, 80ch 120px, 80ch 150px; 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <p>In this appendix, we talk about some useful development tools that the Rust
+        project provides. We’ll look at automatic formatting, quick ways to apply
+        warning fixes, a linter, and integrating with IDEs.</p>
+        <h3>Automatic Formatting with <code>rustfmt</code></h3>
+        <p>The <code>rustfmt</code> tool reformats your code according to the community code style.
+        Many collaborative projects use <code>rustfmt</code> to prevent arguments about which
+        style to use when writing Rust: everyone formats their code using the tool.</p>
+        <p>To install <code>rustfmt</code>, enter the following:</p>
+        <pre><code class="language-console">$ rustup component add rustfmt
+        </code></pre>
+        <p>This command gives you <code>rustfmt</code> and <code>cargo-fmt</code>, similar to how Rust gives you
+        both <code>rustc</code> and <code>cargo</code>. To format any Cargo project, enter the following:</p>
+        <pre><code class="language-console">$ cargo fmt
+        </code></pre>
+        <p>Running this command reformats all the Rust code in the current crate. This
+        should only change the code style, not the code semantics. For more information
+        on <code>rustfmt</code>, see <a href="https://github.com/rust-lang/rustfmt">its documentation</a>.</p>
+        <h3>Fix Your Code with <code>rustfix</code></h3>
+        <p>The rustfix tool is included with Rust installations and can automatically fix
+        compiler warnings that have a clear way to correct the problem that’s likely
+        what you want. It’s likely you’ve seen compiler warnings before. For example,
+        consider this code:</p>
+        <p><span class="filename">Filename: src/main.rs</span></p>
+        <pre><code class="language-rust">fn do_something() {}
+        
+        fn main() {
+            for i in 0..100 {
+                do_something();
+            }
+        }
+        </code></pre>
+        <p>Here, we’re calling the <code>do_something</code> function 100 times, but we never use the
+        variable <code>i</code> in the body of the <code>for</code> loop. Rust warns us about that:</p>
+        <pre><code class="language-console">$ cargo build
+           Compiling myprogram v0.1.0 (file:///projects/myprogram)
+        warning: unused variable: `i`
+         --&gt; src/main.rs:4:9
+          |
+        4 |     for i in 0..100 {
+          |         ^ help: consider using `_i` instead
+          |
+          = note: #[warn(unused_variables)] on by default
+        
+            Finished dev [unoptimized + debuginfo] target(s) in 0.50s
+        </code></pre>
+        <p>The warning suggests that we use <code>_i</code> as a name instead: the underscore
+        indicates that we intend for this variable to be unused. We can automatically
+        apply that suggestion using the <code>rustfix</code> tool by running the command <code>cargo fix</code>:</p>
+        <pre><code class="language-console">$ cargo fix
+            Checking myprogram v0.1.0 (file:///projects/myprogram)
+              Fixing src/main.rs (1 fix)
+            Finished dev [unoptimized + debuginfo] target(s) in 0.59s
+        </code></pre>
+        <p>When we look at <em>src/main.rs</em> again, we’ll see that <code>cargo fix</code> has changed the
+        code:</p>
+</body>
+</html>
