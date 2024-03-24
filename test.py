@@ -1,4 +1,4 @@
-def fibonacci(n):
+def fibonacci():
     # this is tail recursive function
      if n == 0:
          return 0
