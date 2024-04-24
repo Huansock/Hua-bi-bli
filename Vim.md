@@ -56,6 +56,7 @@ CTRL-W 는 모든 윈도우 기능을 사용할 수 있음.
 |   w   |                 change window                 |
 | HJKL  |    move window to right, left, top, bottom    |
 | hjkl  | move focus to right, left, top, bottom window |
+| o     | kill another windows                          |
 
 
 :wall 
